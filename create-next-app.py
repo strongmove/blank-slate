@@ -30,6 +30,17 @@ DEFI = {
         "prompt": {"type": "confirm", "name": "react-icons", "default": "y"},
         "actions": [lambda: "pnpm add react-icons"],
     },
+    "rxjs": {
+        "prompt": {"type": "confirm", "name": "rxjs", "default": "y"},
+        "actions": [lambda: "pnpm add rxjs"],
+    },
+    "markdown": {
+        "prompt": {"type": "confirm", "name": "markdown", "default": "y"},
+        "actions": [
+            lambda: "pnpm add react-markdown",
+            lambda: "pnpm add rehype-highlight",
+        ],
+    },
 }
 
 
