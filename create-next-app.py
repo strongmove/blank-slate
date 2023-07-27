@@ -41,6 +41,12 @@ DEFI = {
             lambda: "pnpm add rehype-highlight",
         ],
     },
+    "trpc": {
+        "prompt": {"type": "confirm", "name": "markdown", "default": "y"},
+        "actions": [
+            lambda: "pnpm add @trpc/server @trpc/client",
+        ],
+    },
 }
 
 
