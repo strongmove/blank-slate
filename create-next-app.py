@@ -44,7 +44,7 @@ DEFI = {
     "trpc": {
         "prompt": {"type": "confirm", "name": "markdown", "default": "y"},
         "actions": [
-            lambda: "pnpm add @trpc/server @trpc/client",
+            lambda: "pnpm add @trpc/server @trpc/client @tanstack/react-query @tanstack/react-query/devtools",
         ],
     },
 }
