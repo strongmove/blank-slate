@@ -9,6 +9,8 @@
     "pnpm add @trpc/server @trpc/client @tanstack/react-query @tanstack/react-query/devtools",
     "pnpm add zod",
     "pnpm add rxjs",
-    "pnpm add xstate @xstate/react"
+    "pnpm add xstate @xstate/react",
+    "pnpm add @prisma/client",
+    "pnpm add -D prisma"
   ]
 }

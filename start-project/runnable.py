@@ -16,10 +16,22 @@ class PnpmAddDevRunnable(Runnable):
     def __init__(self, name, dev=False):
         super().__init__(name, run_pnpm_add, [name, dev], {})
 
+    def __str__(self):
+        return f"ShellRunnable(command={self.args[0]})"
+
+    def __repr__(self):
+        return f"ShellRunnable(command={self.args[0]})"
+
 
 class ShellRunnable(Runnable):
     def __init__(self, command):
         super().__init__("GENERIC", run_generic_shell, [command], {})
+
+    def __str__(self):
+        return f"ShellRunnable(command={self.args[0]})"
+
+    def __repr__(self):
+        return f"ShellRunnable(command={self.args[0]})"
 
 
 def run_generic_shell(command):

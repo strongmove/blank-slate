@@ -14,7 +14,7 @@ class QueueRunner:
         while self.running:
             try:
                 queue_item = self.queue.popleft()
-                print("queue item is ", queue_item.item)
+                print("queue item is", queue_item.item)
                 queue_item.item.run()
             except IndexError:
                 self.stop()
