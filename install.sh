@@ -12,7 +12,7 @@ source ~/.bashrc
 # Essentials
 /home/linuxbrew/.linuxbrew/bin/brew install fish chezmoi diff-so-fancy
 # Extras
-/home/linuxbrew/.linuxbrew/bin/brew install eza fzf ripgrep zoxide tmux xsel lazygit zk
+/home/linuxbrew/.linuxbrew/bin/brew install eza fzf ripgrep zoxide tmux xsel lazygit zk rust
 # Setup fish as default shell
 command -v fish | sudo tee -a /etc/shells
 chsh -s "$(command -v fish)"
