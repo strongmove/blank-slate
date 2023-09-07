@@ -10,8 +10,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source ~/.bashrc
 
 # Essentials
-/home/linuxbrew/.linuxbrew/bin/brew install fish
-# /home/linuxbrew/.linuxbrew/bin/brew install fish chezmoi diff-so-fancy
+/home/linuxbrew/.linuxbrew/bin/brew install fish chezmoi diff-so-fancy
 # Extras
 # /home/linuxbrew/.linuxbrew/bin/brew install exa fzf ripgrep zoxide tmux xsel lazygit zk
 # Setup fish as default shell
