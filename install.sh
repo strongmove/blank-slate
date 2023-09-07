@@ -3,7 +3,7 @@
 # wget -O /tmp/blank-slate.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install.sh && bash /tmp/blank-slate.sh
 
 sudo apt update -y
-sudo apt install curl build-essential git -y
+sudo apt install curl build-essential git python3-pip -y
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
