@@ -19,4 +19,4 @@ chsh -s "$(command -v fish)"
 
 /home/linuxbrew/.linuxbrew/bin/chezmoi init git@github.com:strongmove/dotfiles.git
 /home/linuxbrew/.linuxbrew/bin/chezmoi update
-# /home/linuxbrew/.linuxbrew/bin/fish
+/home/linuxbrew/.linuxbrew/bin/fish
