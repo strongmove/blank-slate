@@ -12,9 +12,11 @@ source ~/.bashrc
 # Essentials
 /home/linuxbrew/.linuxbrew/bin/brew install fish chezmoi diff-so-fancy
 # Extras
-/home/linuxbrew/.linuxbrew/bin/brew install eza fzf ripgrep zoxide tmux xsel lazygit zk rust
+/home/linuxbrew/.linuxbrew/bin/brew install eza fzf ripgrep zoxide tmux xsel lazygit 
+/home/linuxbrew/.linuxbrew/bin/brew zk rust bat gdu bpytop ranger
 # Setup fish as default shell
-command -v fish | sudo tee -a /etc/shells
+grep -qF fish /etc/shells || command -v fish | sudo tee -a  /etc/shells
+# command -v fish | sudo tee -a /etc/shells
 chsh -s "$(command -v fish)"
 
 /home/linuxbrew/.linuxbrew/bin/chezmoi init git@github.com:strongmove/dotfiles.git
