@@ -13,7 +13,7 @@ source ~/.bashrc
 /home/linuxbrew/.linuxbrew/bin/brew install fish chezmoi diff-so-fancy
 # Extras
 /home/linuxbrew/.linuxbrew/bin/brew install eza fzf ripgrep zoxide tmux xsel lazygit 
-/home/linuxbrew/.linuxbrew/bin/brew zk rust bat gdu bpytop ranger
+/home/linuxbrew/.linuxbrew/bin/brew install zk rust bat gdu bpytop ranger
 # Setup fish as default shell
 grep -qF fish /etc/shells || command -v fish | sudo tee -a  /etc/shells
 # command -v fish | sudo tee -a /etc/shells
