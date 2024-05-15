@@ -13,6 +13,8 @@ from ui.selection import Selection
 
 cwd = Path(__file__).parent
 
+PACKAGE_EXECUTABLE = "bun"
+
 
 @dataclass
 class ManifestShellCommandItem:
@@ -33,7 +35,7 @@ class ManifestShellCommandItemData(TypedDict):
 
 ManifestType = TypedDict(
     "ManifestType",
-    {"items": list[ManifestShellCommandItemData] or str},
+    {"items": list[ManifestShellCommandItemData] | str},
 )
 
 
@@ -76,11 +78,19 @@ def main():
     for group_name, items in groups.items():
         if group_name == "PNPM_ADD":
             args = " ".join([item.args for item in items])
-            cmd = f"pnpm add {args}"
+            cmd = f"{PACKAGE_EXECUTABLE} add {args}"
             runner.add(QueueItem(ShellRunnable(cmd)))
         elif group_name == "PNPM_ADD_DEV":
             args = " ".join([item.args for item in items])
-            cmd = f"pnpm add -D {args}"
+            cmd = f"{PACKAGE_EXECUTABLE} add -D {args}"
+            runner.add(QueueItem(ShellRunnable(cmd)))
+        elif group_name == "BUN_ADD":
+            args = " ".join([item.args for item in items])
+            cmd = f"{PACKAGE_EXECUTABLE} add {args}"
+            runner.add(QueueItem(ShellRunnable(cmd)))
+        elif group_name == "BUN_ADD_DEV":
+            args = " ".join([item.args for item in items])
+            cmd = f"{PACKAGE_EXECUTABLE} add -D {args}"
             runner.add(QueueItem(ShellRunnable(cmd)))
         else:
             for item in items:

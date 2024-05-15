@@ -17,6 +17,39 @@ def register_parser(parser):
 # Register parser in the order of specificity
 
 
+@register_parser("BUNX")
+def parse_bun_dlx(string: str):
+    pattern = re.compile(r"bunx (?P<args>.*$)")
+    item_type = "BUNX"
+    if match := pattern.match(string):
+        return Item(item_type, match.group("args"), f"bunx {match.group('args')}")
+
+
+@register_parser("BUN_CREATE")
+def parse_bun_create(string: str):
+    pattern = re.compile(r"bun (create) (?P<args>.*$)")
+    item_type = "BUN_CREATE"
+    if match := pattern.match(string):
+        return Item(item_type, match.group("args"), f"bun create {match.group('args')}")
+
+
+# BUN_ADD_DEV is more specific than BUN_ADD
+@register_parser("BUN_ADD_DEV")
+def parse_bun_add_dev(string: str):
+    pattern = re.compile(r"bun (add) (-D) (?P<args>.*$)")
+    item_type = "BUN_ADD_DEV"
+    if match := pattern.match(string):
+        return Item(item_type, match.group("args"), None)
+
+
+@register_parser("BUN_ADD")
+def parse_bun_add(string: str):
+    pattern = re.compile(r"bun (add) (?P<args>.*$)")
+    item_type = "BUN_ADD"
+    if match := pattern.match(string):
+        return Item(item_type, match.group("args"), None)
+
+
 @register_parser("PNPM_DLX")
 def parse_pnpm_dlx(string: str):
     pattern = re.compile(r"pnpm (dlx) (?P<args>.*$)")

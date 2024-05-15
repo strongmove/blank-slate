@@ -5,6 +5,8 @@ Group = namedtuple("Group", ["name", "items"])
 DEFAULT_GROUPS = {
     "PNPM_ADD_DEV": {"priority": 0},
     "PNPM_ADD": {"priority": 1000},
+    "BUN_ADD_DEV": {"priority": 0},
+    "BUN_ADD": {"priority": 1000},
     "NO_GROUP": {"priority": 2000},
 }
 

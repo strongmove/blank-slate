@@ -1,16 +1,18 @@
 {
   "items": [
-    "pnpm create next-app --ts .",
-    "pnpm dlx shadcn-ui@latest init",
-    "pnpm dlx shadcn-ui@latest add",
-    "pnpm add -D sass",
-    "pnpm add react-icons",
-    "pnpm add react-markdown rehype-highlight",
-    "pnpm add @trpc/server @trpc/client @tanstack/react-query @tanstack/react-query/devtools",
-    "pnpm add zod",
-    "pnpm add rxjs",
-    "pnpm add xstate @xstate/react",
-    "pnpm add @prisma/client",
-    "pnpm add -D prisma"
+    "bun create next-app --ts .",
+    "bunx shadcn-ui@latest init",
+    "bunx shadcn-ui@latest add",
+    "bun add -D sass",
+    "bun add drizzle-orm postgres @auth/drizzle-adapter next-auth@beta",
+    "bun add -D drizzle-kit",
+    "bun add react-icons",
+    "bun add react-markdown rehype-highlight",
+    "bun add @trpc/server @trpc/client @tanstack/react-query @tanstack/react-query/devtools",
+    "bun add zod",
+    "bun add rxjs",
+    "bun add xstate @xstate/react",
+    "bun add @prisma/client",
+    "bun add -D prisma"
   ]
 }
