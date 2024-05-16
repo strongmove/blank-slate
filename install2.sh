@@ -25,6 +25,6 @@ grep -qF fish /etc/shells || command -v $BREWBIN/fish | sudo tee -a /etc/shells
 # command -v fish | sudo tee -a /etc/shells
 chsh -s "$(command -v $BREWBIN/fish)"
 
-# $BREWBIN/chezmoi init git@github.com:strongmove/dotfiles.git
-# $BREWBIN/chezmoi update
+$BREWBIN/chezmoi init git@github.com:strongmove/dotfiles.git
+$BREWBIN/chezmoi update
 $BREWBIN/fish
