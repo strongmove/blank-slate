@@ -1,6 +1,6 @@
 #!/bin/bash -ilvx
 
-# wget -O /tmp/blank-slate.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install.sh && bash /tmp/blank-slate.sh
+# wget -O /tmp/blank-slate.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install_v2.sh && bash /tmp/blank-slate.sh
 
 export BREWBIN="/home/linuxbrew/.linuxbrew/bin"
 
