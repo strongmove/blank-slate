@@ -9,7 +9,7 @@ CHOICE_INDEXES = list("123456789abcdefghijklmnoprstuvwxyzABCDEFGHIJKLMNOPRSTUVWX
 def show_options(definition, s, r, c):
     for key, item in definition.items():
         if isinstance(item, Selection):
-            color = curses.color_pair(4) if item.selected else curses.color_pair(1)
+            color = curses.color_pair(3) if item.selected else curses.color_pair(1)
             s.addstr(r, c, f"{key}) {item}", color)
             r += 1
     s.addstr(
@@ -26,7 +26,7 @@ def get_user_selection_with_ui(manifest):
         s.clear()
         s.refresh()
         curses.start_color()
-        curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_BLACK)
+        curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_BLACK)
         curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
         curses.init_pair(3, curses.COLOR_GREEN, curses.COLOR_BLACK)
         curses.init_pair(4, curses.COLOR_YELLOW, curses.COLOR_BLACK)
