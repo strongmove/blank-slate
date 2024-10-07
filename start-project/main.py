@@ -3,13 +3,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal, TypedDict
 
-from groupers import group_items
-from parsers import parse_items
-from queue_item import QueueItem
-from queue_runner import QueueRunner
-from runnable import ShellRunnable
-from ui.planner import get_user_selection_with_ui
-from ui.selection import Selection
+from .groupers import group_items
+from .parsers import parse_items
+from .queue_item import QueueItem
+from .queue_runner import QueueRunner
+from .runnable import ShellRunnable
+from .ui.planner import get_user_selection_with_ui
+from .ui.selection import Selection
 
 cwd = Path(__file__).parent
 
