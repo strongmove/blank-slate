@@ -27,5 +27,4 @@ chsh -s "$(command -v $BREWBIN/fish)"
 
 $BREWBIN/chezmoi init git@github.com:strongmove/dotfiles.git
 $BREWBIN/chezmoi update
-$BREWBIN/fish -c "cd $HOME/.config/fish && git reset --hard HEAD && git clean -fd && fisher update"
 $BREWBIN/fish
