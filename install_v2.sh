@@ -3,6 +3,7 @@
 # wget -O /tmp/blank-slate.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install_v2.sh && bash /tmp/blank-slate.sh
 
 export BREWBIN="/home/linuxbrew/.linuxbrew/bin"
+export PATH="$BREWBIN:$PATH"
 
 sudo apt update -y
 sudo apt install curl build-essential git pipx dnsutils openssh-server -y
