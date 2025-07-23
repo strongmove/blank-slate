@@ -5,7 +5,7 @@
 export BREWBIN="/home/linuxbrew/.linuxbrew/bin"
 
 sudo apt update -y
-sudo apt install curl build-essential git pipx dnsutils -y
+sudo apt install curl build-essential git pipx dnsutils openssh-server -y
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 source ~/.bashrc
 
