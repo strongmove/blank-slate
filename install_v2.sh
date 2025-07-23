@@ -4,6 +4,12 @@
 
 if grep -qi 'debian' /etc/os-release; then
   echo "Recognized as a Debian distribution."
+  if [ ! -d "$HOME/.ssh" ]; then
+    echo "Cannot continue as user $USER because $HOME/.ssh does not exist."
+    echo "Parts of this setup requires accessing private Github repositories."
+    echo "Please install appropriate ssh keys into $HOME/.ssh and try again."
+    exit 1
+  fi
   if sudo -l -U "$USER" &>/dev/null; then
     echo "User is in sudoers."
   else
