@@ -18,7 +18,7 @@ git -C ~/.config/fish pull
 # Essentials
 $BREWBIN/brew install chezmoi diff-so-fancy
 # Extras
-$BREWBIN/brew install eza fzf ripgrep zoxide tmux xsel lazygit
+$BREWBIN/brew install eza fzf ripgrep fd zoxide tmux xsel lazygit
 $BREWBIN/brew install zk rust bat gdu bpytop ranger
 # Setup fish as default shell
 grep -qF fish /etc/shells || command -v $BREWBIN/fish | sudo tee -a /etc/shells
