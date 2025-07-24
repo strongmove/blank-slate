@@ -10,8 +10,9 @@ sudo pacman -Syu --noconfirm curl git python-pipx unzip dnsutils fish chezmoi di
 
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
 
-chsh -s /usr/bin/fish
+
 
 chezmoi init git@github.com:strongmove/dotfiles.git
 chezmoi update
+chsh -s /usr/bin/fish
 /usr/bin/fish
