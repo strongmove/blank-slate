@@ -14,7 +14,7 @@ if [ ! -d "$HOME/.ssh" ]; then
   exit 1
 fi
 
-sudo pacman -Syu --noconfirm curl git python-pipx unzip dnsutils fish chezmoi diff-so-fancy eza fzf ripgrep zoxide tmux xsel lazygit fd zk rust bat gdu bpytop ranger
+sudo pacman -Syu --noconfirm curl git python-pipx unzip dnsutils fish neovim chezmoi diff-so-fancy eza fzf ripgrep zoxide tmux xsel lazygit fd zk rust bat gdu bpytop ranger
 
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
 
