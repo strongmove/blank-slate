@@ -6,6 +6,7 @@
 
 # curl -o script.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install_arch.sh && bash script.sh
 
+
 if [ ! -d "$HOME/.ssh" ]; then
   echo "Cannot continue as user $USER because $HOME/.ssh does not exist."
   echo "Parts of this setup requires accessing private Github repositories."
