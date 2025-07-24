@@ -14,7 +14,7 @@ if [ ! -d "$HOME/.ssh" ]; then
   exit 1
 fi
 
-sudo pacman -Syu --noconfirm curl git fish
+sudo pacman -Syu --noconfirm curl git fish unzip
 
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
 
