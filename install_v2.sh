@@ -39,7 +39,6 @@ $BREWBIN/brew install fish
 
 echo "$BREWBIN/brew shellenv" | $BREWBIN/fish
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
-git -C "$HOME/.config/fish pull"
 
 # Essentials
 $BREWBIN/brew install chezmoi diff-so-fancy
