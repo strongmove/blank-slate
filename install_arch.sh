@@ -1,6 +1,6 @@
 #!/bin/bash -ilvx
 
-# wget -O a.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install_arch.sh && bash a.sh
+# curl -fsSL https://raw.githubusercontent.com/strongmove/blank-slate/main/install_arch.sh | bash
 
 sudo pacman -Syu --noconfirm curl git python-pipx unzip dnsutils fish chezmoi diff-so-fancy eza fzf ripgrep zoxide tmux xsel lazygit fd zk rust bat gdu bpytop ranger
 
