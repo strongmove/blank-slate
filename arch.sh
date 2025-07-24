@@ -23,3 +23,4 @@ chezmoi update
 
 chsh -s /usr/bin/fish
 /usr/bin/fish
+
