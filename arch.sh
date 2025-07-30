@@ -4,7 +4,7 @@
 # 1) run `archinstall` and reboot before continuing
 # 2) import $HOME/.ssh to allow git clone from private github repository.
 
-# curl -o script.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/install_arch.sh && bash script.sh
+# curl -o script.sh https://raw.githubusercontent.com/strongmove/blank-slate/main/arch.sh && bash script.sh
 
 
 if [ ! -d "$HOME/.ssh" ]; then
