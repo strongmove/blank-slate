@@ -15,6 +15,7 @@ if [ ! -d "$HOME/.ssh" ]; then
 fi
 
 sudo pacman -Syu --noconfirm curl wget which git git-delta python-pipx unzip dnsutils fish neovim xorg-xauth chezmoi diff-so-fancy eza fzf ripgrep zoxide tmux xsel lazygit fd zk rust bat gdu bpytop ranger
+sudo pacman -Syu --noconfirm go
 
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
 
