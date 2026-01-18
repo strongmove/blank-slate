@@ -17,6 +17,14 @@ fi
 sudo pacman -Syu --noconfirm curl wget which git git-delta python-pipx unzip dnsutils fish neovim xorg-xauth chezmoi diff-so-fancy eza fzf ripgrep zoxide tmux xsel lazygit fd zk rust bat gdu bpytop ranger
 sudo pacman -Syu --noconfirm go
 
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
+makepkg -si --noconfirm
+yay -S --noconfirm python312
+cd ~
+rm -rf /tmp/yay
+
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
 
 chezmoi init git@github.com:strongmove/dotfiles.git
