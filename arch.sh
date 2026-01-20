@@ -10,7 +10,9 @@ set -e
 # Ensure SSH keys are present for private repo access
 if [ ! -d "$HOME/.ssh" ]; then
   echo "$HOME/.ssh does not exist."
-  read -rp "Enter SCP source for your .ssh directory (e.g., u@mainstay.home): " scp_source
+  default_scp_source="u@proxmain.home"
+  read -rp "Enter SCP source for your .ssh directory (default: $default_scp_source): " scp_source
+  scp_source="${scp_source:-$default_scp_source}"
   if scp -r "$scp_source:~/.ssh" "$HOME/"; then
     echo "Successfully copied .ssh directory from $scp_source."
   else
