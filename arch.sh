@@ -46,15 +46,6 @@ if ! command -v pyenv &>/dev/null; then
   curl https://pyenv.run | bash
 fi
 
-# Add pyenv to PATH for this session
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Install Python 3.12
-pyenv install 3.12
-pyenv global 3.12
-
 # Clone fish config
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
 
