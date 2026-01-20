@@ -16,9 +16,12 @@ fi
 
 # Install essential packages
 sudo pacman -Syu --noconfirm \
-  curl wget which git git-delta python-pipx unzip dnsutils fish neovim xorg-xauth \
-  chezmoi diff-so-fancy eza fzf ripgrep zoxide tmux xsel lazygit fd zk rust bat \
-  gdu bpytop ranger go
+  bat bpytop chezmoi curl diff-so-fancy \
+  dnsutils eza fd fish fzf \
+  gdu git git-delta go lazygit \
+  neovim python-pipx ranger ripgrep rust \
+  tmux unzip wget which xorg-xauth \
+  xsel zk zoxide
 
 # Install yay (AUR helper)
 if ! command -v yay &>/dev/null; then
