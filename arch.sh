@@ -1,4 +1,5 @@
 #!/bin/bash -ilvx
+set -e
 
 # On a new machine running live image
 # 1) run `archinstall` and reboot before continuing
@@ -8,10 +9,16 @@
 
 # Ensure SSH keys are present for private repo access
 if [ ! -d "$HOME/.ssh" ]; then
-  echo "Cannot continue as user $USER because $HOME/.ssh does not exist."
-  echo "Parts of this setup require accessing private Github repositories."
-  echo "Please install appropriate ssh keys into $HOME/.ssh and try again."
-  exit 1
+  echo "$HOME/.ssh does not exist."
+  read -rp "Enter SCP source for your .ssh directory (e.g., u@mainstay.home): " scp_source
+  if scp -r "$scp_source:~/.ssh" "$HOME/"; then
+    echo "Successfully copied .ssh directory from $scp_source."
+  else
+    echo "Failed to copy .ssh directory from $scp_source."
+    echo "Parts of this setup require accessing private Github repositories."
+    echo "Please install appropriate ssh keys into $HOME/.ssh and try again."
+    exit 1
+  fi
 fi
 
 # Install essential packages
