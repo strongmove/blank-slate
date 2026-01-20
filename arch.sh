@@ -23,12 +23,13 @@ fi
 
 # Install essential packages
 sudo pacman -Syu --noconfirm \
-  bat bpytop chezmoi curl diff-so-fancy \
-  dnsutils eza fd fish fzf \
-  gdu git git-delta go lazygit \
-  neovim python-pipx ranger ripgrep rust \
-  tmux unzip wget which xorg-xauth \
-  xsel zk zoxide
+  base-devel bat bpytop chezmoi curl \
+  diff-so-fancy dnsutils eza fd fish \
+  fzf gdu git git-delta go \
+  lazygit neovim openssl python-pipx ranger \
+  ripgrep rust tk tmux unzip \
+  wget which xorg-xauth xsel xz \
+  zk zlib zoxide
 
 # Install yay (AUR helper)
 if ! command -v yay &>/dev/null; then
@@ -40,11 +41,19 @@ if ! command -v yay &>/dev/null; then
   rm -rf /tmp/yay
 fi
 
-# Optionally install Python 3.12 from AUR
-read -rp "Do you want to install python312 from AUR? [y/N]: " install_py
-if [[ "$install_py" =~ ^[Yy]$ ]]; then
-  yay -S --noconfirm python312
+# Install pyenv and Python 3.12
+if ! command -v pyenv &>/dev/null; then
+  curl https://pyenv.run | bash
 fi
+
+# Add pyenv to PATH for this session
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Install Python 3.12
+pyenv install 3.12
+pyenv global 3.12
 
 # Clone fish config
 git clone git@github.com:strongmove/fish "$HOME/.config/fish"
