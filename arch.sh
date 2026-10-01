@@ -25,7 +25,7 @@ fi
 
 # Install essential packages
 sudo pacman -Syu --noconfirm \
-  base-devel bat bpytop chezmoi curl \
+  base-devel bat btop chezmoi curl \
   diff-so-fancy dnsutils eza fd fish \
   fzf gdu git git-delta go \
   lazygit neovim openssl python-pipx ranger \
